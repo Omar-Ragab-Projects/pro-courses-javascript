@@ -43,14 +43,14 @@ randomSet[0].onclick = function () {
   specialImage.forEach((i) => i.classList.remove("active"));
   randbg = setInterval(() => {
     let randomImg = Math.floor(Math.random() * imags.length);
-    landpage.style.backgroundImage = `url("./../imgs/${imags[randomImg]}")`;
+    landpage.style.backgroundImage = `url("./imgs/${imags[randomImg]}")`;
   }, 10000);
 };
 randomSet[1].onclick = function () {
   this.classList.add("active");
   randomSet[0].classList.remove("active");
   localStorage.setItem("randomBg", "no");
-  landpage.style.backgroundImage = "url(./../imgs/bg2.jpg)";
+  landpage.style.backgroundImage = "url(./imgs/bg2.jpg)";
   localStorage.removeItem("special-image");
   specialImage.forEach((i) => i.classList.remove("active"));
   clearInterval(randbg);
@@ -60,7 +60,7 @@ let landpage = document.querySelector(".landing-page");
 let imags = ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg", "bg5.jpg"];
 randbg = setInterval(() => {
   let randomImg = Math.floor(Math.random() * imags.length);
-  landpage.style.backgroundImage = `url("./../imgs/${imags[randomImg]}")`;
+  landpage.style.backgroundImage = `url("./imgs/${imags[randomImg]}")`;
 }, 10000);
 // Local Storage Random Bg
 if (localStorage.getItem("randomBg")) {
